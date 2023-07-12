@@ -1,0 +1,459 @@
+\documentclass{article}
+
+% Package allows fixed width for tabular environments, used for grammar examples
+\usepackage{array}
+
+% Package allows the use of Japanese text
+\usepackage{xeCJK}
+\setCJKmainfont{NOTOSERIFJP-REGULAR.OTF}
+\setCJKsansfont{NOTOSANSJP-LIGHT.TTF}
+
+% Hyperlink package, used for the table of contents
+\usepackage{hyperref}
+
+% Package allows the use of furigana
+\usepackage{ruby}
+\renewcommand{\rubysep}{0.25ex}
+
+% Allows me to "abuse" math mode for certain formatting
+\usepackage{amsmath}
+
+\title{Genki Grammar Index}
+\date{}
+\author{}
+
+
+% Grammar rule
+\newcommand{\grule}[2]{
+	\,\\\-\quad 
+	{\renewcommand{\arraystretch}{1.5}
+	\begin{tabular}{|ll|}
+		\hline
+		#1 &\quad #2 \\
+		\hline
+	\end{tabular}
+	}\\\\
+}
+
+% Multi-line grammar rule
+\newenvironment{grules}
+{
+	\,\\\-\quad 
+	\renewcommand{\arraystretch}{1.5}
+	\begin{tabular}{|ll|}
+		\hline
+}
+{
+		\\ 
+		\hline
+	\end{tabular}
+	\renewcommand{\arraystretch}{1}
+	\\\\
+}
+
+
+% Examples
+\newenvironment{gex}
+{
+	\,\\
+	\renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{m{20em} l}
+}
+{
+	\end{tabular}
+	\renewcommand{\arraystretch}{1}
+	\\
+}
+
+
+\begin{document}
+   \maketitle
+   
+   % Rename title of the table of contents
+   \renewcommand{\contentsname}{Genki 1 Chapters}
+   \tableofcontents
+   \newpage
+   
+   % Chapter 1
+   \section{です, は particle, Questions, の particle}
+   \subsection{X は Y です}
+   \grule{$\sim$です。}{It is $\sim$.} 
+   Examples: 
+   \begin{gex}
+   \ruby{十}{じゅう}\ruby{二}{に}\ruby{時}{じ}\ruby{半}{はん}です。 \quad & (It) is half past twelve.\\
+   \ruby{学生}{がくせい}です。 & (I) am a student. \\
+   \ruby{日本}{にほん}\ruby{語}{ご}です。 & (My major) is the Japanese language.
+   \end{gex}
+   Note that none of the sentences have a subject. This is common in Japanese, where context is relied on instead.\\
+   To make what we are talking about explicit, we can use the は particle. When は is used as a particle it is pronounced as わ.\\
+   \grule{XはYです。}{X is Y.} \\
+   Examples: 
+   \begin{gex}
+   \underline{\ruby{私}{わたし}は}スーキムです。 & \underline{I} am Sue Kim.\\
+   \underline{\ruby{山下}{やました}さんは}\ruby{先生}{せんせい}です。 & \underline{Mr. Yamashita} is a teacher. \\
+   \underline{メアリーさんは}アメリカ\ruby{人}{じん}です。 & \underline{Mary} is an American.
+   \end{gex}
+   In Japanese, there is nothing that corresponds to the english "a", nor the plural "-s". Without context, a sentence like "学生です" is therefore ambiguous. It may mean "\{We are/You are/They are\} students" as well as "\{I am/You are/She is\} a student".
+   
+   
+   \subsection{Question Sentences}
+   To form a question in Japanese you add か to the end of the sentence.
+   \begin{gex}
+   \ruby{留学生}{りゅうがくせい}です。& (I am) an international student. \\
+   \ruby{留学生}{りゅうがくせい}です\underline{か}。 & (Are you) an international student?
+   \end{gex}
+   Questions can also be formed using a "question word" like "\ruby{何}{なん}" (what). 
+   \begin{gex}
+   \ruby{専攻}{せんこう}は\underline{\ruby{何}{なん}}ですか。 & What is your major? \\
+   \ruby{専攻}{せんこう}は\underline{\ruby{英}{えい}\ruby{語}{ご}}です。 & (My major) is English. \\
+   \ruby{今}{いま}\underline{\ruby{何}{なん}\ruby{時}{じ}}ですか。 & What time is it now? \\
+   \ruby{今}{いま}\underline{くじ}です。 & It is nine o'clock. \\
+   メアリーさんは\underline{\ruby{何}{なん}\ruby{歳}{さい}}ですか。 & How old are you, Mary? \\
+   \underline{\ruby{十}{じゅう}\ruby{九}{きゅう}\ruby{歳}{さい}}です。 & I'm nineteen years old. \\
+   \underline{\ruby{何}{なん}\ruby{年生}{ねんせい}}ですか。 & What year are you in college? \\
+   \underline{\ruby{二}{に}\ruby{年生}{ねんせい}}です。 & I'm on my second year. \\
+   \ruby{電話}{でんわ}\ruby{番号}{ばんごう}は\underline{何}ですか。 & What is your telephone number? \\
+   \underline{１８６の７３４３}です。 & It is 186-7343.
+   \end{gex}   
+   Note that question marks are not used in Japanese. \\
+   
+   
+   
+   
+   \subsection{noun$_1$のnoun$_2$}
+   の is a possessive particle that connects two nouns like "'s" in English (The cat's leg). The phrase "さくら大学の学生" means "a student at Sakura University". The second noun 学生 provides the main idea (being a student) and the first noun さくら大学 makes it more specific. の is more versatile than the English counterpart. \\
+   Examples:
+   \begin{gex}
+   \underline{たけしさんの}\ruby{電話}{でんわ}\ruby{番号}{ばんごう}&\underline{Takeshi's} phone number\\
+   \underline{\ruby{大学}{だいがく}の}\ruby{先生}{せんせい}&A \underline{college} professor\\
+   \underline{\ruby{日本}{にほん}\ruby{語}{ご}の}\ruby{学生}{がくせい}&A student \underline{of the Japanese language}\\
+   \underline{\ruby{日本}{にほん}の}\ruby{大学}{だいがく}&A college \underline{in Japan}
+   \end{gex}
+   Note how English changes word order, in Japanese the main idea always comes at the end. Generally speaking, it works as such: \\
+   \grule{noun$_1$のnoun$_2$}{noun$_2$ of noun$_1$}
+   The result of using の between two nouns is also a noun.
+   
+   \newpage
+      
+   
+   % Chapter 2
+   \section{This, here, whos', negation and other basics}
+   \subsection{これ、それ、あれ、どれ}
+   To say "This" or "That", これ and それ are used in Japanese respectively. これ refers to something close to the speaker and それ refers to something close to the listener. 
+   \begin{gex}
+   これはいくらですか。 & How much is this? \\
+   それは\ruby{三}{さん}\ruby{千}{ぜん}\ruby{円}{えん}です。 & That is 3,000 yen.
+   \end{gex}   
+   In Japanese there is an additional word, あれ, which refers to something that is neither closer to the speaker nor the listener.
+   \begin{gex}
+   これは\ruby{私}{わたし}のペンです。 & This is my pen. (Close to me) \\
+   それは私のペンです。 & That is my pen. (Close to the listener) \\
+   あれは私のペンです。 & That is my pen (over there). (Close to neither)
+   \end{gex}
+   There is also the word どれ, which means "which".
+   \begin{gex}
+   どれですか。 & Which one is it (that you are talking about)?
+   \end{gex}
+   Question words like どれ and なに cannot be followed by the は particle, instead が must be used.
+   \begin{gex}
+   どれ\underline{が}あなたのぺんですか。 & Which one is your pen?
+   \end{gex}
+   
+   
+   \subsection{この、その、あの、どの$+$noun}
+   If you want to be more specific than これ, それ, etc you can use この、その、あの、どの. 
+   \begin{gex}
+   \underline{この\ruby{時計}{とけえ}}はいくらですか。 & How much is \underline{this watch}? \\
+   \underline{その\ruby{時計}{とけえ}}は\ruby{三}{さん}\ruby{千}{ぜん}\ruby{円}{えん}です。 & \underline{That watch} is 3,000 yen. \\
+   \underline{あの\ruby{時計}{とけえ}}は\ruby{三}{さん}\ruby{千}{ぜん}\ruby{五}{ご}\ruby{百}{ひゃく}\ruby{円}{えん}です。 & \underline{That watch (over there)} is 3,500 yen. \\
+   \underline{どの\ruby{時計}{とけえ}}は\ruby{三}{さん}\ruby{千}{ぜん}\ruby{五}{ご}\ruby{百}{ひゃく}\ruby{円}{えん}ですか。 & \underline{Which watch} is 3,500 yen??
+   \end{gex}
+   %\grule{これ(は$\sim$)\quad このnoun(は$\sim$)}{close to the person speaking}
+   %\grule{それ(は$\sim$)\quad そのnoun(は$\sim$)}{close to the person listening}
+   %\grule{あれ(は$\sim$)\quad あのnoun(は$\sim$)}{far from both people}
+   %\grule{どれ(は$\sim$)\quad どのnoun(は$\sim$)}{unknown}
+   \begin{grules}
+   これ(は$\sim$)\ \ / \ このnoun(は$\sim$) & close to the person speaking \\
+   それ(は$\sim$)\ \ / \ そのnoun(は$\sim$) & close to the person listening \\
+   あれ(は$\sim$)\ \ / \ あのnoun(は$\sim$) & far from both people\\
+   どれ(は$\sim$)\ \ / \ どのnoun(は$\sim$) & distance not known
+   \end{grules}
+   
+   
+   \subsection{ここ、そこ、あそこ、どこ}
+   ここ, そこ, etc are words for places.
+   \begin{grules}
+   ここ & here, near me \\
+   そこ & there, near you \\
+   あそこ & over there \\
+   どこ & where
+   \end{grules}
+   You can ask for directions:
+   \begin{gex}
+   すみません。\ruby{郵便局}{ゆうびんきょく}はどこですか。 & Excuse me. Where is the post office?
+   \end{gex}
+   If the listener is close by, they can answer with:
+   \begin{gex}
+   (\ruby{郵便局}{ゆうびんきょく})はそこです。 & (The post office is) right over there.
+   \end{gex}
+   
+   
+   \subsection{だれのnoun}
+   The question word for "who" is \ruby{誰}{だれ}, and for "whose" we add the possessive particle の: \ruby{誰}{だれ}の.
+   \begin{gex}
+   これは\underline{\ruby{誰}{だれ}の}カバンですか。 & \underline{Whose} bag is this? \\
+   それは\underline{スーさんの}カバンです。 & That is \underline{Sue's} bag.
+   \end{gex}
+   
+   
+   \subsection{nounも}
+   The particle も can be used to say "Item A is this, and item B is this \underline{too}."
+   \begin{gex}
+   たけしさんは日本人です。 & Takeshi is a Japanese person. \\
+   みちこさん\underline{も}日本人です。 & Michiko is Japanese, \underline{too}.
+   \end{gex}   
+   \begin{grules}
+   A は X です。 & A is X. \\
+   B も X です。 & B is also X.
+   \end{grules}
+      
+   
+   
+   \subsection{nounじゃないです}
+   To negate a statement of the form XはYです, where Y is a noun, you can replace です with じゃないです。 
+   \begin{gex}
+   \ruby{山田}{やまだ}さんは学生じゃないです。 & Mr. Yamada is not a student.
+   \end{gex}  
+   じゃないです is very colloquial, the formal correspondent is じゃありません, and an even more formal version is ではありません (for written language). \\
+   \begin{grules}
+   (Xは)Y & X is Y. \\   
+   (Xは)Y
+   $\begin{cases}
+   \text{じゃないです。}&\\
+   \text{じゃありません。}& \\
+   \text{ではありません。}&
+   \end{cases}$
+   & X is not Y.
+   \end{grules}
+   
+   \subsection{$\sim$ね/$\sim$よ suffix}
+   There are suffixes in Japanese that are used depending on how the speakers views the interaction. If the speaker is seeking confirmation or agreement they may use ね ("right?") as a suffix.
+   \begin{gex}
+   リーさんの\ruby{選考}{せんこう}は\ruby{文学}{ぶんがく}ですね。 & Ms. Lee, your major is literature, right? \\
+   これは\ruby{肉}{にく}じゃないですね。 & This is not meat, is it?
+   \end{gex}   
+   Another suffix, よ, is used if the speaker wants to assure the listener of what has been said ("I tell you". 
+   \begin{gex}
+   とんかつは\ruby{魚}{さかな}じゃないですよ。 & Let me assure you. "Tonkatsu" is not fish. \\
+   スミスさんはイギリス人ですよ。 & (In case you're wondering,) Mr. Smith is British.
+   \end{gex}
+   
+   
+   
+   \newpage
+   
+   % Chapter 3
+   \section{Verbs, word order, adverbs and the は particle}
+   \subsection{Verb Conjugation}
+   There are two kinds of verbs that follow regular conjugation patterns, ru-verbs and u-verbs. 
+   \begin{center}
+   \begin{tabular}{|lll|}
+   \hline
+   &ru-verb & u-verb \\
+   dictionary forms&\ruby{食}{た}べる&\ruby{行}{い}く \\
+   present, affirmative&\ruby{食}{た}べます&\ruby{行}{い}きます \\
+   present, negative &\ruby{食}{た}べません&\ruby{行}{い}きません \\
+   stems &\ruby{食}{た}べ&\ruby{行}{い}き\\
+   \hline
+   \end{tabular}
+   \end{center}      
+   Examples of ru-verbs are \ruby{食}{た}べる (To eat)、\ruby{寝}{ね}る (To sleep)、\ruby{起}{お}きる (To wake up)、\ruby{見}{み}る (To see).\\
+   Examples of u-verbs are \ruby{飲}{の}む (To drink)、\ruby{読}{よ}む (To read)、\ruby{話}{はな}す (To speak)、\ruby{聞}{き}く (To hear)、\ruby{行}{い}く (To go)、\ruby{帰}{かえ}る (To return). \\ \\
+   There are also two irregular verbs, する (to do) and くる (to come).
+   \begin{center}
+   \begin{tabular}{|lll|}
+   \hline
+   dictionary forms&する&くる \\
+   present, affirmative&します&きます \\
+   present, negative &しません&きません \\
+   stems &します&き\\
+   \hline
+   \end{tabular}
+   \end{center}   
+   Note how ru-verbs conjugate by removing the る and adding for example ます, u-verbs conjugate differently, the last hiragana-character in the verb goes to the い version of its group, and for example ます is then appended. In both cases, they conjugate by transforming to their stem form before the "conjugation-suffix" is appended. \\ \\
+   If you see the vowels あ、お、う before the る in the dictionary forms, you can be absolutely sure that the verb is an u-verb. 
+   
+   
+   
+   
+   \subsection{Verb Types and the "Present Tense"}
+   If a verb is conjugated in the "present tense", it either means:
+   \begin{enumerate}
+   \item That a person habitually engages in these activities 
+   \item That a person is planning to perform the activities in the future
+   \end{enumerate}
+   Habitual examples:
+   \begin{gex}
+   私はよくテレビを\ruby{読}{よ}みます。 & I often watch TV. \\
+   メアリーさんは\ruby{時}{とき}\ruby{々}{どき}\ruby{朝}{あさ}ご\ruby{飯}{はん}を\ruby{食}{た}べません。 & Mary sometimes doesn't eat breakfast.
+   \end{gex}
+   Future examples:
+   \begin{gex}
+   私は\ruby{明日}{あした}\ruby{京都}{きょうと}に\ruby{行}{い}きます。 & I will go to Kyoto tomorrow. \\
+   スーさんは\ruby{今日}{きょう}うちに\ruby{帰}{かえ}りません。 & Sue will not return home today. 
+   \end{gex}
+   
+   
+   
+   \subsection{Particles}
+   The particle を indicates "direct objects", the kind of things that are directly involved in, or affected by, the event. Note that this particle is pronounced "お".
+   \begin{gex}
+   コーヒー\underline{を}\ruby{飲}{の}みます。 & I drink coffee. \\
+   \ruby{音楽}{おんがく}\underline{を}\ruby{聞}{き}きます。 & I listen to music. \\
+   テレビ\underline{を}\ruby{見}{み}ます。 & I watch TV.
+   \end{gex}      
+   \\
+   The particle で indicates where the event described by the verb takes place.
+   \begin{gex}
+   \ruby{図}{と}\ruby{書}{しょ}\ruby{館}{かん}\underline{で}\ruby{本}{ほん}を\ruby{読}{よ}みます。 & I will read books in the library. \\
+   \ruby{家}{うち}\underline{で}テレビを\ruby{見}{み}ます。 & I will watch TV at home.
+   \end{gex}
+   \\
+   The particle に has many meanings, but here we will learn two:
+   \begin{enumerate}
+   \item The goal toward which things move. 
+   \item The time at which an event takes place.
+   \end{enumerate}
+   (1) goal of movement examples:
+   \begin{gex}
+   私は今日\ruby{学校}{がっこう}\underline{に}行きません。 & I will not go to school today.\\
+   私はうち\underline{に}帰ります。 & I will return home.
+   \end{gex}
+   (2) time examples:
+   \begin{gex}
+   \ruby{日}{にち}\ruby{曜}{よう}\ruby{日}{び}\underline{に}京都に行きます。 & I will go to Kyoto on Sunday. \\
+   \ruby{十}{じゅう}\ruby{一}{いち}\ruby{時}{じ}\underline{に}\ruby{寝}{ね}ます。 & I will go to bed at eleven.
+   \end{gex}
+   Approximate time references can be made by substiting ごろ or ごろに for に. Example:
+   \begin{gex}
+   \ruby{十}{じゅう}\ruby{一}{いち}\ruby{時}{じ}\underline{ごろに}\ruby{寝}{ね}ます。 & I will go to bed at about eleven.
+   \end{gex}
+   The particle へ, too, indicates the goal of movement. The sentences following (1) above can therefore be rewritten using へ instead of に. Note that this particle is pronounced "え". 
+   \begin{gex}
+   私は今日\ruby{学校}{がっこう}\underline{へ}行きません。 & I will not go to school today.\\
+   私はうち\underline{へ}帰ります。 & I will return home.
+   \end{gex}
+   へ cannot replace に in the examples following (2).
+   
+   \subsection{Time Reference}
+   
+   
+   
+   \subsection{$\sim$ませんか}
+   \subsection{Word Order}
+   \subsection{Frequency Adverbs}
+   \subsection{The Topic Particle は}
+   
+   \newpage
+   
+   % Chapter 4
+   \section{•}
+   \subsection{Xがあります/います}
+   \subsection{Describing Where Things Are}
+   \subsection{Past Tense of です}
+   \subsection{Past Tense of Verbs}
+   \subsection{も}
+   \subsection{一時間}
+   \subsection{たくさん}
+   \subsection{と}
+   
+   \newpage
+   
+   % Chapter 5
+   \section{•}
+   \subsection{Adjectives}
+   \subsection{好き(な)/きらい(な)}
+   \subsection{$\sim$ましょう/$\sim$ましょうか}
+   \subsection{Counting}
+   
+   \newpage
+   
+   % Chapter 6
+   \section{•}
+   \subsection{Te-form}
+   \subsection{$\sim$てください}
+   \subsection{$\sim$もいいます}
+   \subsection{$\sim$てはいけません}
+   \subsection{Describing Two Activities}
+   \subsection{$\sim$から}
+   \subsection{$\sim$ましょうか}
+   
+   \newpage
+   
+   % Chapter 7
+   \section{•}
+   \subsection{$\sim$ている}
+   \subsection{メアリーさんは髪が長いです}
+   \subsection{Te-forms for Joining Sentences}
+   \subsection{verb stem + にいく}
+   \subsection{Counting People}
+   
+   \newpage
+   
+   % Chapter 8
+   \section{•}
+   \subsection{Short Forms}
+   \subsection{Informal Speech}
+   \subsection{$\sim$とおもいます/$\sim$といっていました}
+   \subsection{$\sim$ないでください}
+   \subsection{verbのがすきです}
+   \subsection{が}
+   \subsection{何か and 何も}
+   
+   \newpage
+   
+   % Chapter 9
+   \section{•}
+   \subsection{Past Tense Short Forms (verbs)}
+   \subsection{Qualifying Nouns with Verbs and Adjectives}
+   \subsection{まだ$\sim$ていません}
+   \subsection{$\sim$から}
+   
+   \newpage
+   
+   % Chapter 10
+   \section{•}
+   \subsection{Comparison between Two items}
+   \subsection{Comparison among Three or More Items}
+   \subsection{adjective/noun + の}
+   \subsection{$\sim$つもりだ}
+   \subsection{adjective + なる}
+   \subsection{どこかに/どこにも}
+   \subsection{で}
+   
+   \newpage
+   
+   % Chapter 11
+   \section{•}
+   \subsection{$\sim$たい}
+   \subsection{$\sim$たり$\sim$たりする}
+   \subsection{$\sim$ことがある}
+   \subsection{noun Aやnoun B}
+   
+   \newpage
+   
+   % Chapter 12
+   \section{•}
+   \subsection{$\sim$んです}
+   \subsection{$\sim$すぎる}
+   \subsection{$\sim$ほうがいいです}
+   \subsection{$\sim$ので}
+   \subsection{$\sim$なければいけません/$\sim$なきゃいけません}
+   \subsection{$\sim$でしょう}
+   
+   
+   
+   
+   
+   
+\end{document}
