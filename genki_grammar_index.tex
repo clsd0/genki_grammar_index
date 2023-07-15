@@ -13,7 +13,8 @@
 
 % Package allows the use of furigana
 \usepackage{ruby}
-\renewcommand{\rubysep}{0.25ex}
+\renewcommand{\rubysep}{0.23ex}
+\renewcommand{\rubysize}{0.5}
 
 % Allows me to "abuse" math mode for certain formatting
 \usepackage{amsmath}
@@ -346,19 +347,87 @@
    へ cannot replace に in the examples following (2).
    
    \subsection{Time Reference}
-   
+   The particle に needs to be used with (1) days of the week like "on sunday" and (2) numerical time expressions like "at 10:45" and "in September". 
+   \begin{gex}
+   	\underline{\ruby{日曜日}{にちようび}}に\ruby{行}{い}きます。 & I will go on Sunday. \\ 
+   \underline{十時四十五分に\ruby{起}{お}}きます。& I get up at 10:45. \\
+   \underline{\ruby{九}{く}\ruby{月}{がつ}}に\ruby{帰}{お}ります。 & I will go back in September.
+   \end{gex}    
+   You do not use the に particle with (1) time expressions that are relative to the present, such as "today", "tomorrow" or "yesterday, (2) time expressions describing regular intervals, such as "every day", and (3) the word for "when". 
+   \begin{gex}
+   \underline{\ruby{明日}{あした}}\ruby{来}{き}ます。 &  I will come tomorrow. \\
+   \underline{\ruby{毎}{まい}}\ruby{晩}{ばん}テレビを見ます。 & I watch TV every evening. \\
+   \underline{いつ}行きますか。 & When will you go?
+   \end{gex}
+   The に particle is normally not used with (1) parts of the day like "in the morning" and "at night", and(2) the word for "weekend", however it can be done. 
+   \begin{gex}
+   \underline{\ruby{朝}{あさ}}(に)\ruby{新聞}{しんぶん}を\ruby{読}{よ}みます。 & I read the newspaper in the morning. \\
+   \underline{\ruby{週末}{しゅうまつ}}(に)\ruby{何}{なに}をしますか。 & What will you do on weekends? 
+   \end{gex}
    
    
    \subsection{$\sim$ませんか}
+   You can use ませんか to extend an invitation.
+   \begin{gex}
+   \ruby{昼}{ひる}ご\ruby{飯}{はん}を食べませんか。 & What do you say to having lunch with me? \\
+   いいですね。 & Sounds great \\
+   テニスをしませんか。 & Will you play tennis with me? \\
+   うーん、ちょっと。 & Um, it's slightly (inconvenient for me at this moment).
+   \end{gex}
+   
+   
    \subsection{Word Order}
+   Japanese word order is fairly flexible. In general, sentences are made up of several noun-particle sequences followed by a verb or adjective which is then followed by a suffix like か, ね or よ. The orders of the noun-particle sequences are to a large extent free. Typical examples are listed below: \\ \\
+   \begin{tabular}{ccccc}
+   私は & 今日 & \ruby{図書館}{としょかん}で & 日本語を & 勉強します。 \\
+   topic & time & place & object & verb
+   \end{tabular} \\
+   \textit{I will study Japanese in the library today.} \\ \\
+   \begin{tabular}{ccccc}
+   私は & よく & \ruby{七時}{しちじ}ごろ & 家へ & 帰ります。 \\
+   topic & frequency & time & goal & verb
+   \end{tabular} \\
+   \textit{I often go home around 7 o'clock.}
+   
+   
    \subsection{Frequency Adverbs}
+   You can add frequency adverbs such as \ruby{毎}{まい}\ruby{日}{にち} (everyday), よく (often) and \ruby{時}{とき}\ruby{々}{どき} (sometimes) to a sentence to describe how often you do something.
+   \begin{gex}
+   私は\underline{\ruby{時}{とき}\ruby{々}{どき}}\ruby{喫茶店}{きっさてん}に行きます。 & I sometimes go to a coffee shop.
+   \end{gex}
+   There are also infrequency adverbs such as せんぜん (never) and あまり (not often), to use an infrequency adverb the sentence needs to have a negative end, in other words you need to conclude it with for example ません.
+   \begin{gex}
+   私は\underline{せんぜん}テレビを見\underline{ません}。 & I do not watch TV at all. \\
+   たけしさんは\underline{あまり}\ruby{勉強}{べんきょう}し\underline{ません}。 & Takeshi does not study much.
+   \end{gex}
+   
+   
    \subsection{The Topic Particle は}
+   The は particle marks the topic, which is a broader category than a subject. Examples:
+   \begin{gex}
+   メアリーさん、\ruby{週末}{しゅうまつ}はたいてい何をしますか & Mary, what do you usally do on the weekend? \\
+   今日は京都に行きます。 & I'm going to Kyoto today. 
+   \end{gex}
+   Here は puts the time expressions as the topic of each sentence, its effect can be paraphrased as "Let's talk about weekends; what do you do on weekends?" and "Let me say what I will do today; I will go to Kyoto".
+   \begin{gex}
+   \ruby{晩}{ばん}ご\ruby{飯}{はん}は & How about diner? \\
+   食べません & I will not eat.
+   \end{gex}
+   In this example は is used to direct the listeners attention to the dinner as a topic, thereby prompting the listening to comment or complete the sentence. 
+   
    
    \newpage
    
    % Chapter 4
    \section{•}
    \subsection{Xがあります/います}
+   Xがあります means "there is/are X (nonliving thing)". 
+   \begin{gex}
+   あそこにマクドナルドがあります。 & There's a McDonald's over there.
+   \end{gex}
+   
+   
+   
    \subsection{Describing Where Things Are}
    \subsection{Past Tense of です}
    \subsection{Past Tense of Verbs}
